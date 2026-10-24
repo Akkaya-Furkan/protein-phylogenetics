@@ -1,0 +1,37 @@
+{
+  "commands": [
+    [
+      "mafft",
+      "--auto",
+      "--thread",
+      "1",
+      "data/source/sequences.fasta"
+    ],
+    [
+      "iqtree2",
+      "-s",
+      "results/alignment.fasta",
+      "-st",
+      "AA",
+      "-m",
+      "MFP",
+      "-msub",
+      "mitochondrial",
+      "-B",
+      "1000",
+      "-bnni",
+      "-wbt",
+      "-seed",
+      "22",
+      "-T",
+      "1",
+      "--prefix",
+      "results/cytb"
+    ]
+  ],
+  "versions": {
+    "mafft": "v7.526 (2024/Apr/26)",
+    "iqtree2": "IQ-TREE multicore version 2.4.0 for Linux x86 64-bit built Feb 12 2025\nDeveloped by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,\nDominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong"
+  },
+  "analysis_wall_seconds": 16.361
+}

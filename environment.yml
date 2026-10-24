@@ -1,0 +1,13 @@
+name: p22-phylogenetics
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - python=3.12
+  - mafft=7.526
+  - iqtree=2.4.0
+  - biopython=1.85
+  - matplotlib=3.10
+  - requests=2.32
+  - pytest=8.4

@@ -1,0 +1,11 @@
+{
+  "retrieved_at_utc": "2026-10-24T12:57:34.727660+00:00",
+  "request_url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22Cytochrome+b%22+AND+%28organism_id%3A9606+OR+organism_id%3A9598+OR+organism_id%3A9595+OR+organism_id%3A9601+OR+organism_id%3A9685+OR+organism_id%3A9615+OR+organism_id%3A9644+OR+organism_id%3A9720+OR+organism_id%3A9913+OR+organism_id%3A9940+OR+organism_id%3A9925+OR+organism_id%3A9823%29+AND+reviewed%3Atrue+AND+length%3A%5B350+TO+400%5D&format=json&size=500",
+  "query": "protein_name:\"Cytochrome b\" AND (organism_id:9606 OR organism_id:9598 OR organism_id:9595 OR organism_id:9601 OR organism_id:9685 OR organism_id:9615 OR organism_id:9644 OR organism_id:9720 OR organism_id:9913 OR organism_id:9940 OR organism_id:9925 OR organism_id:9823) AND reviewed:true AND length:[350 TO 400]",
+  "uniprot_release": "2026_03",
+  "uniprot_release_date": "02-September-2026",
+  "source_sha256": "09c24fb9bc3c5562505c9866654b9beb8dc7630ff97da5978c7854fcc9638d39",
+  "selected_count": 12,
+  "returned_count": 12,
+  "selection": "Reviewed, exact Cytochrome b name, no fragment flag, exact taxon ID, 350\u2013400 standard amino acids; lowest accession if multiple candidates."
+}

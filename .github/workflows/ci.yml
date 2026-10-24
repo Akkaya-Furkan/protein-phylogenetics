@@ -1,0 +1,31 @@
+name: phylogenetics
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: p22-phylogenetics
+          miniforge-version: latest
+          use-mamba: true
+      - name: Verify frozen data and run real-tool integration
+        run: python -m pytest -v --junitxml=pytest-results.xml
+      - name: Preserve test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-results
+          path: pytest-results.xml

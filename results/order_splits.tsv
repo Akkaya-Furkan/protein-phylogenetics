@@ -1,0 +1,4 @@
+order	taxa	split_present	support_percent
+Artiodactyla	4	True	88.0
+Carnivora	4	False	None
+Primates	4	True	100.0

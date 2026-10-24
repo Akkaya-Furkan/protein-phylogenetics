@@ -1,0 +1,49 @@
+{
+  "sequence_count": 12,
+  "unique_sequence_count": 12,
+  "accession_count": 12,
+  "taxon_count": 12,
+  "species_count": 12,
+  "order_counts": {
+    "Primates": 4,
+    "Carnivora": 4,
+    "Artiodactyla": 4
+  },
+  "input_length_min": 379,
+  "input_length_max": 380,
+  "alignment_columns": 380,
+  "gap_cells": 8,
+  "alignment_cells": 4560,
+  "variable_columns": 131,
+  "parsimony_informative_columns": 98,
+  "tree_tip_count": 12,
+  "bootstrap_tree_count": 1000,
+  "internal_edge_count": 9,
+  "internal_support_min": 51.0,
+  "internal_support_max": 100.0,
+  "selected_model": "mtMAM+G4",
+  "seed": 22,
+  "threads": 1,
+  "orders_with_split": 2,
+  "orders_assessed": 3,
+  "order_assessments": [
+    {
+      "order": "Artiodactyla",
+      "taxa": 4,
+      "split_present": true,
+      "support_percent": 88.0
+    },
+    {
+      "order": "Carnivora",
+      "taxa": 4,
+      "split_present": false,
+      "support_percent": null
+    },
+    {
+      "order": "Primates",
+      "taxa": 4,
+      "split_present": true,
+      "support_percent": 100.0
+    }
+  ]
+}

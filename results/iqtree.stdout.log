@@ -1,0 +1,201 @@
+IQ-TREE multicore version 2.4.0 for Linux x86 64-bit built Feb 12 2025
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    fedora (AVX2, FMA3, 31 GB RAM)
+Command: iqtree2 -s results/alignment.fasta -st AA -m MFP -msub mitochondrial -B 1000 -bnni -wbt -seed 22 -T 1 --prefix results/cytb
+Seed:    22 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Oct 24 15:57:43 2026
+Kernel:  AVX+FMA - 1 threads (12 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 12 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file results/alignment.fasta ... Fasta format detected
+Reading fasta file: done in 8.9381e-05 secs
+Alignment most likely contains protein sequences
+Alignment has 12 sequences with 380 columns, 142 distinct patterns
+98 parsimony-informative, 33 singleton sites, 249 constant sites
+        Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 6.87002e-06 secs
+   1  P00156    0.00%    passed     99.94%
+   2  Q9T9V5    0.00%    passed     99.61%
+   3  Q9T9Y3    0.00%    passed     99.79%
+   4  P92701    0.00%    passed     95.18%
+   5  P48886    0.26%    passed    100.00%
+   6  Q34101    0.26%    passed    100.00%
+   7  Q36192    0.26%    passed     99.98%
+   8  Q00530    0.26%    passed    100.00%
+   9  P00157    0.26%    passed    100.00%
+  10  P24959    0.26%    passed     99.97%
+  11  P24953    0.26%    passed    100.00%
+  12  P24964    0.26%    passed    100.00%
+****  TOTAL     0.18%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -2743.156
+Optimal log-likelihood: -2743.143
+Proportion of invariable sites: 0.334
+Gamma shape alpha: 0.717
+Parameters optimization took 1 rounds (0.009 sec)
+Time for fast ML tree search: 0.051 seconds
+
+NOTE: ModelFinder requires 3 MB RAM!
+ModelFinder will test up to 308 protein models (sample size: 380 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  mtREV         2684.061     21  5410.122     5412.703     5492.866
+  2  mtREV+I       2612.218     22  5268.437     5271.271     5355.121
+  3  mtREV+G4      2599.612     22  5243.224     5246.059     5329.908
+  4  mtREV+I+G4    2598.841     23  5243.682     5246.783     5334.306
+  5  mtREV+R2      2600.099     23  5246.199     5249.300     5336.823
+  6  mtREV+R3      2595.745     25  5241.491     5245.163     5339.995
+ 14  mtREV+I+R2    2599.649     24  5247.298     5250.678     5341.862
+ 15  mtREV+I+R3    2596.116     26  5244.231     5248.209     5346.676
+ 25  mtREV+F+G4    2597.584     41  5277.168     5287.357     5438.715
+ 26  mtREV+F+I+G4  2596.751     42  5277.502     5288.221     5442.990
+ 27  mtREV+F+R2    2598.147     42  5280.294     5291.012     5445.782
+ 47  mtART+G4      2669.963     22  5383.925     5386.760     5470.609
+ 48  mtART+I+G4    2668.589     23  5383.178     5386.279     5473.802
+ 49  mtART+R2      2670.928     23  5387.857     5390.958     5478.481
+ 69  mtART+F+G4    2634.876     41  5351.752     5361.941     5513.299
+ 70  mtART+F+I+G4  2633.104     42  5350.207     5360.925     5515.695
+ 71  mtART+F+R2    2636.688     42  5357.377     5368.095     5522.864
+ 91  mtZOA+G4      2634.967     22  5313.933     5316.768     5400.617
+ 92  mtZOA+I+G4    2633.958     23  5313.915     5317.016     5404.539
+ 93  mtZOA+R2      2635.668     23  5317.336     5320.437     5407.960
+113  mtZOA+F+G4    2613.561     41  5309.121     5319.311     5470.668
+114  mtZOA+F+I+G4  2612.248     42  5308.495     5319.213     5473.982
+115  mtZOA+F+R2    2614.726     42  5313.451     5324.169     5478.939
+135  mtMet+G4      2620.125     22  5284.250     5287.085     5370.934
+136  mtMet+I+G4    2619.107     23  5284.215     5287.316     5374.839
+137  mtMet+R2      2620.539     23  5287.078     5290.179     5377.702
+157  mtMet+F+G4    2586.753     41  5255.506     5265.696     5417.053
+158  mtMet+F+I+G4  2585.502     42  5255.004     5265.722     5420.491
+159  mtMet+F+R2    2587.589     42  5259.178     5269.896     5424.665
+179  mtVer+G4      2584.078     22  5212.155     5214.990     5298.839
+180  mtVer+I+G4    2582.397     23  5210.793     5213.894     5301.417
+181  mtVer+R2      2585.107     23  5216.214     5219.316     5306.838
+201  mtVer+F+G4    2579.316     41  5240.633     5250.822     5402.180
+202  mtVer+F+I+G4  2577.609     42  5239.218     5249.936     5404.705
+203  mtVer+F+R2    2580.296     42  5244.593     5255.311     5410.080
+223  mtInv+G4      2695.052     22  5434.105     5436.940     5520.789
+224  mtInv+I+G4    2694.137     23  5434.274     5437.375     5524.898
+225  mtInv+R2      2695.082     23  5436.165     5439.266     5526.789
+245  mtInv+F+G4    2612.013     41  5306.025     5316.215     5467.572
+246  mtInv+F+I+G4  2610.668     42  5305.337     5316.055     5470.824
+247  mtInv+F+R2    2612.713     42  5309.427     5320.145     5474.914
+267  mtMAM+G4      2572.091     22  5188.181     5191.016     5274.865
+268  mtMAM+I+G4    2570.614     23  5187.229     5190.330     5277.853
+269  mtMAM+R2      2573.561     23  5193.122     5196.223     5283.746
+289  mtMAM+F+G4    2569.806     41  5221.611     5231.801     5383.158
+290  mtMAM+F+I+G4  2568.279     42  5220.558     5231.277     5386.046
+291  mtMAM+F+R2    2571.323     42  5226.646     5237.364     5392.133
+Akaike Information Criterion:           mtMAM+I+G4
+Corrected Akaike Information Criterion: mtMAM+I+G4
+Bayesian Information Criterion:         mtMAM+G4
+Best-fit model: mtMAM+G4 chosen according to BIC
+
+All model information printed to results/cytb.model.gz
+CPU time for ModelFinder: 1.466 seconds (0h:0m:1s)
+Wall-clock time for ModelFinder: 1.491 seconds (0h:0m:1s)
+Generating 1000 samples for ultrafast bootstrap (seed: 22)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -2572.543
+2. Current log-likelihood: -2572.095
+Optimal log-likelihood: -2572.090
+Gamma shape alpha: 0.358
+Parameters optimization took 2 rounds (0.016 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0155433 secs using 99.37% CPU
+Computing ML distances took 0.015578 sec (of wall-clock time) 0.015483 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 3.1461e-05 secs using 95.36% CPU
+Computing RapidNJ tree took 0.000112 sec (of wall-clock time) 0.000111 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -2574.285
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.036 second
+Computing log-likelihood of 95 initial trees ... 0.272 seconds
+Current best score: -2572.090
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2572.090
+Iteration 10 / LogL: -2572.529 / Time: 0h:0m:2s
+Iteration 20 / LogL: -2572.181 / Time: 0h:0m:2s
+Finish initializing candidate tree set (2)
+Current best tree score: -2572.090 / CPU time: 0.874
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2572.524 / Time: 0h:0m:2s (0h:0m:3s left)
+Iteration 40 / LogL: -2573.439 / Time: 0h:0m:3s (0h:0m:2s left)
+Iteration 50 / LogL: -2572.593 / Time: 0h:0m:3s (0h:0m:2s left)
+Iteration 60 / LogL: -2579.609 / Time: 0h:0m:4s (0h:0m:2s left)
+Iteration 70 / LogL: -2572.476 / Time: 0h:0m:4s (0h:0m:1s left)
+Iteration 80 / LogL: -2572.110 / Time: 0h:0m:5s (0h:0m:1s left)
+Iteration 90 / LogL: -2572.551 / Time: 0h:0m:6s (0h:0m:0s left)
+Iteration 100 / LogL: -2572.521 / Time: 0h:0m:6s (0h:0m:0s left)
+Refining ufboot trees with NNI 1 branch...
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 344 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:16s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2572.090
+Optimal log-likelihood: -2572.090
+Gamma shape alpha: 0.358
+Parameters optimization took 1 rounds (0.008 sec)
+BEST SCORE FOUND : -2572.090
+Creating bootstrap support values...
+Split supports printed to NEXUS file results/cytb.splits.nex
+Total tree length: 1.064
+
+Total number of iterations: 102
+CPU time used for tree search: 14.214 sec (0h:0m:14s)
+Wall-clock time used for tree search: 14.453 sec (0h:0m:14s)
+Total CPU time used: 15.762 sec (0h:0m:15s)
+Total wall-clock time used: 16.027 sec (0h:0m:16s)
+UFBoot trees printed to results/cytb.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file results/cytb.splits.nex...
+12 taxa and 68 splits.
+Consensus tree written to results/cytb.contree
+Reading input trees file results/cytb.contree
+Log-likelihood of consensus tree: -2572.090
+
+Analysis results written to: 
+  IQ-TREE report:                results/cytb.iqtree
+  Maximum-likelihood tree:       results/cytb.treefile
+  Likelihood distances:          results/cytb.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          results/cytb.splits.nex
+  Consensus tree:                results/cytb.contree
+  UFBoot trees:                  results/cytb.ufboot
+  Screen log file:               results/cytb.log
+
+Date and Time: Sat Oct 24 15:57:59 2026
